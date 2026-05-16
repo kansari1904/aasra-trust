@@ -61,7 +61,7 @@ const Navbar = () => {
           position: absolute;
           bottom: 0; left: 0;
           width: 0; height: 2px;
-          background: #efa968;
+          background: #199058;
           border-radius: 99px;
           transition: width 0.3s ease;
         }
@@ -104,7 +104,6 @@ const Navbar = () => {
           position: absolute;
           inset: -3px;
           border-radius: 99px;
-          background: rgba(239,169,104,0.35);
           opacity: 0;
           transition: opacity 0.3s;
         }
@@ -155,15 +154,15 @@ const Navbar = () => {
                     </a>
 
                     {/* ── Desktop Nav Links ─────────────────────────────────────────── */}
-                    <nav className="hidden lg:flex items-center gap-10 bg-gray-50 rounded-2xl px-2 py-2 border border-gray-100">
+                    <nav className="hidden lg:flex items-center gap-10 bg-gray-50 rounded-2xl px-4 py-2 border border-gray-100">
                         {navLinks.map((link) => (
                             <a
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setActiveLink(link.href)}
-                                className={`nav-link text-sm font-medium px-4 py-2 rounded-xl transition-all duration-300 ${activeLink === link.href
-                                        ? 'text-slate-900 shadow-sm '
-                                        : 'text-slate-500 hover:text-slate-900 hover:bg-white/60'
+                                className={`nav-link text-sm font-medium px-5  py-2 rounded-xl transition-all duration-300 ${activeLink === link.href
+                                        ? 'text-slate-900 '
+                                        : 'text-slate-500 hover:text-slate-900 '
                                     }`}
                             >
                                 {link.label}
@@ -173,13 +172,7 @@ const Navbar = () => {
 
                     {/* ── Desktop CTA ───────────────────────────────────────────────── */}
                     <div className="hidden lg:flex items-center gap-3">
-                        <a
-                            href="/volunteer"
-                            className="text-sm font-medium text-slate-600 hover:text-[#efa968] transition-colors duration-300"
-                        >
-                            Volunteer
-                        </a>
-                        <button className="donate-btn flex items-center gap-2 bg-[#efa968] hover:bg-[#e09050] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md">
+                        <button className="donate-btn flex items-center gap-2 bg-[#0A5C36] hover:bg-[#199058] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md">
                             <Heart size={14} fill="white" />
                             Donate Now
                         </button>
@@ -187,7 +180,7 @@ const Navbar = () => {
 
                     {/* ── Mobile Hamburger ─────────────────────────────────────────── */}
                     <button
-                        className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-[#efa968]/10 transition-colors duration-300"
+                        className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-[#199058]/10 transition-colors duration-300"
                         onClick={() => setMenuOpen((p) => !p)}
                         aria-label="Toggle menu"
                         aria-expanded={menuOpen}
@@ -229,13 +222,13 @@ const Navbar = () => {
                             href={link.href}
                             onClick={() => { setActiveLink(link.href); setMenuOpen(false) }}
                             className={`mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-sm font-medium transition-all duration-200 ${activeLink === link.href
-                                    ? 'bg-[#efa968]/10 text-[#efa968]'
+                                ? 'bg-[#199058]/10 text-[#199058]'
                                     : 'text-slate-700 hover:bg-gray-50 hover:text-slate-900'
                                 }`}
                         >
                             {link.label}
                             {activeLink === link.href && (
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#efa968]" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#199058]" />
                             )}
                         </a>
                     ))}
@@ -250,7 +243,7 @@ const Navbar = () => {
 
                 {/* Bottom CTA */}
                 <div className="px-4 pb-8 mobile-link">
-                    <button className="donate-btn w-full flex items-center justify-center gap-2 bg-[#efa968] hover:bg-[#e09050] text-white text-sm font-semibold px-5 py-3.5 rounded-2xl transition-all duration-300 shadow-sm">
+                    <button className="donate-btn w-full flex items-center justify-center gap-2 bg-[#0A5C36] hover:bg-[#199058] text-white text-sm font-semibold px-5 py-3.5 rounded-2xl transition-all duration-300 shadow-sm">
                         <Heart size={15} fill="white" />
                         Donate Now
                     </button>
