@@ -39,7 +39,7 @@ const About = () => {
             <h1 className='mt-3 font-bold text-2xl'>Who we are?</h1>
             <p className='text-center text-slate-600 mt-3'>
                  laborum tenetur blanditiis eos iusto nulla adipisci?
-                Repellendus quia aperiam eum, cum doloremque, sapiente necessitatibus vel reiciendis nemo in tempora! A facilis voluptatibus, aut repudiandae quam eum mollitia praesentium nulla laboriosam quod minus, culpa molestias saepe non!
+                Repellendus quia aperiam eum, cum doloremque, sapiente necessitatibus vel reiciendis nemo in tempora! A facilis voluptatibus, aut repudiandae quam eum mollitia praesentium nulla laboriosam quod minus, culpa molestias saepe!
             </p> 
               <button
                   className="relative flex items-center gap-2 bg-[#0A5C36] hover:bg-[#199058] text-white text-sm lg:text-lg font-semibold px-5 py-2.5 rounded-full hover:translate-x-3 transition-all duration-300 shadow-sm hover:shadow-md hover:cursor-pointer mt-5"
